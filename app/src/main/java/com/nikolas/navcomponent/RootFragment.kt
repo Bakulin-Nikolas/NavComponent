@@ -3,6 +3,7 @@ package com.nikolas.navcomponent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -21,6 +22,11 @@ class RootFragment : Fragment(R.layout.fragment_root) {
         }
         binding.openGreenBoxButton.setOnClickListener {
             openBox(Color.rgb(200,255,200))
+        }
+
+        parentFragmentManager.setFragmentResultListener(BoxFragment.REQUEST_CODE, viewLifecycleOwner) { requestCode, data ->
+            val number = data.getInt(BoxFragment.EXTRA_RANDOM_NUMBER)
+            Toast.makeText(requireContext(), "Generate number : $number", Toast.LENGTH_SHORT).show()
         }
     }
 
