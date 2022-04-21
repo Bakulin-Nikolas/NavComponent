@@ -9,4 +9,6 @@
     <string name="close_the_whole_box">Close The Whole Box</string>
     <string name="green_box">Green Box</string>
     <string name="yellow_box">Yellow Box</string>
+    <string name="color_name_green">Green</string>
+    <string name="color_name_yellow">Yellow</string>
 </resources>
