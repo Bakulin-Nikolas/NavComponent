@@ -23,6 +23,9 @@
             android:id="@+id/action_boxFragment_to_secretFragment"
             app:destination="@id/secretFragment" />
         <argument
+            android:name="color"
+            app:argType="integer" />
+        <argument
             android:name="colorName"
             app:argType="string" />
     </fragment>
